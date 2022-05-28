@@ -18,6 +18,9 @@ void add(T value) {
 int height() {
   return heightTree(root);
 }
+int search(T value) {
+  return searchNode(root, value);
+}
 
  private:
   Node* root;
@@ -34,6 +37,8 @@ int height() {
     } else {
       root->count++;
     }
+    return root;
+  }
   int heightTree(Node* root) {
     if (root == nullptr)
       return 0;
@@ -47,7 +52,6 @@ int height() {
       return R+1;
     else
       return L+1;
-
   }
   int searchNode(Node* root, T value) {
     if (root == nullptr)
@@ -59,6 +63,6 @@ int height() {
     else
       return root->count;
   }
-}
+};
 
 #endif  // INCLUDE_BST_H_
