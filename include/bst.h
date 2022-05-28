@@ -42,10 +42,8 @@ int search(T value) {
   int heightTree(Node* root) {
     if (root == nullptr)
       return 0;
-    if ((root->left == nullptr) && (root->right == nullptr)) {
+    if (root->left == nullptr && root->right == nullptr)
       return 0;
-    }
-
     int L = heightTree(root->left);
     int R = heightTree(root->right);
     if (R > L)
