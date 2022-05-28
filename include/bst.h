@@ -30,7 +30,7 @@ int height() {
     } else if (root->value > value) {
       root->left = addNode(root->left, value);
     } else if (root->value < value) {
-      root->right = addNode (root->right, value);
+      root->right = addNode(root->right, value);
     } else {
       root->count++;
     }
@@ -40,13 +40,14 @@ int height() {
     if ((root->left == nullptr) && (root->right == nullptr)) {
       return 0;
     }
-    
+
     int L = heightTree(root->left);
     int R = heightTree(root->right);
-    if (R>L)
+    if (R > L)
       return R+1;
-    else return L+1;
-    
+    else
+      return L+1;
+
   }
   int searchNode(Node* root, T value) {
     if (root == nullptr)
@@ -58,6 +59,6 @@ int height() {
     else
       return root->count;
   }
-};
+}
 
 #endif  // INCLUDE_BST_H_
