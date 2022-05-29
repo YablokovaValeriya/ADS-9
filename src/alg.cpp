@@ -16,15 +16,15 @@ BST<std::string> makeTree(const char* filename) {
   }
   while (file.eof()) {
     char symbol = file.get();
-    while ((symbol >= 'a' && symbol <= 'z') || (symbol >= 'A' && symbol <= 'Z')) {
-      if (symbol >= 'A' && symbol <= 'Z') {
+    if ((symbol >= 'a' && symbol <= 'z') || (symbol >= 'A' && symbol <= 'Z')) {
+      if (symbol >= 'A' && symbol <= 'Z')
         symbol += dist;
         word += symbol;
-      } else if (word != "") {
-        TREE.add(word);
-        word = "";
-      }
+    } else if (word != "") {
+      TREE.add(word);
+      word = "";
     }
-    file.close();
-    return TREE;
+  }
+  file.close();
+  return TREE;
 }
