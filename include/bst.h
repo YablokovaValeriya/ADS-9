@@ -15,7 +15,7 @@ BST(): root(nullptr) {}
 void add(T value) {
   root = addNode(root, value);
 }
-int height() {
+int depth() {
   return heightTree(root);
 }
 int search(T value) {
