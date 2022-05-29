@@ -27,13 +27,14 @@ BST<std::string> makeTree(const char* filename) {
           k++;
         }
         if (k != 0) {
-        TREE.add(line);
-        line = "";
-      } else {
-        symbol++;
+          TREE.add(line);
+          line = "";
+        } else {
+          symbol++;
+        }
       }
     }
+    file.close();
+    return TREE;
   }
-  file.close();
-  return TREE;
 }
