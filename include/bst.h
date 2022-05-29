@@ -42,8 +42,9 @@ int search(T value) {
   int depthTree(Node* root) {
     if (root == nullptr)
       return 0;
-    if (root->left == nullptr && root->right == nullptr)
+    if ((root->left == nullptr && root->right == nullptr)) {
       return 0;
+    }
     int L = depthTree(root->left);
     int R = depthTree(root->right);
     if (R > L)
