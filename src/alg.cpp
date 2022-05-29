@@ -6,11 +6,11 @@
 #include  "bst.h"
 
 BST<std::string> makeTree(const char* filename) {
-  ifstream file;
+  std::ifstream file;
   file.open(filename);
-  BST<string>TREE;
-  string word;
-  string line;
+  BST<std::string>TREE;
+  std::string word;
+  std::string line;
 
   if (!file) {
     std::cout << "File error!" << std::endl;
