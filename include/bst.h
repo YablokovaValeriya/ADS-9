@@ -16,7 +16,7 @@ void add(T value) {
   root = addNode(root, value);
 }
 int depth() {
-  return depthtTree(root);
+  return depthTree(root);
 }
 int search(T value) {
   return searchNode(root, value);
