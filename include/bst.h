@@ -16,7 +16,7 @@ void add(T value) {
   root = addNode(root, value);
 }
 int depth() {
-  return heightTree(root);
+  return depthtTree(root);
 }
 int search(T value) {
   return searchNode(root, value);
@@ -39,13 +39,13 @@ int search(T value) {
     }
     return root;
   }
-  int heightTree(Node* root) {
+  int depthTree(Node* root) {
     if (root == nullptr)
       return 0;
     if (root->left == nullptr && root->right == nullptr)
       return 0;
-    int L = heightTree(root->left);
-    int R = heightTree(root->right);
+    int L = depthTree(root->left);
+    int R = depthTree(root->right);
     if (R > L)
       return R+1;
     else
