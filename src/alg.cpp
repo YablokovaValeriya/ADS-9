@@ -14,7 +14,7 @@ BST<std::string> makeTree(const char* filename) {
     std::cout << "File error!" << std::endl;
     return TREE;
   }
-  while (file.eof()) {
+  while (!file.eof()) {
     char symbol = file.get();
     if ((symbol >= 'a' && symbol <= 'z') || (symbol >= 'A' && symbol <= 'Z')) {
       if (symbol >= 'A' && symbol <= 'Z')
